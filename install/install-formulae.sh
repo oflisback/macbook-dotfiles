@@ -22,6 +22,8 @@ brew install pyenv
 
 brew install --cask alfred
 
+brew install python
+
 brew install mas
 # Flow (Pomodoro Timer)
 # mas install 1423210932
