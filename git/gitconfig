@@ -1,0 +1,5 @@
+[user]
+name = Ola Flisbäck
+email = ola.flisback@gmail.com
+[core]
+editor = astro-nvim
