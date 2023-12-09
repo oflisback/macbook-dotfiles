@@ -12,10 +12,13 @@ brew install --cask font-fira-code-nerd-font
 
 brew install ripgrep
 brew install zoxide
-brew install discord
-brew install google-chrome
+brew install --cask discord
+brew install --cask google-chrome
+brew install --cask firefox
 brew install --cask 1password
+brew install --cask spotify
 brew install --cask docker
+brew install --cask rectangle
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 brew install pyenv
