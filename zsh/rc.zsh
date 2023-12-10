@@ -49,8 +49,8 @@ PATH=~/bin:/var/lib/snapd/snap/bin:~/.local/bin:~/scripts:$PATH
 #Avoid rm confirmation
 setopt localoptions rmstarsilent
 
-VISUAL=vim;
-export VISUAL EDITOR=vim;
+VISUAL="NVIM_APPNAME=astro nvim"
+export VISUAL EDITOR="NVIM_APPNAME=astro nvim"
 export EDITOR
 
 setopt SHARE_HISTORY

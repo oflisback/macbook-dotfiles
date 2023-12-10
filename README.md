@@ -13,3 +13,6 @@ Then go to ~/Library/Fonts and select MesloLGS NF Regular.ttf, install it. :)
 - https://github.com/edgarjs/alfred-github-repos
 
 - Enable built in bookmarks workflow
+
+- https://github.com/epilande/alfred-browser-tabs
+  And change shortcuts to something shorter e.g. st and ct
