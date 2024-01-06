@@ -11,6 +11,7 @@ brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
 
 brew install ripgrep
+brew install tmux
 brew install zoxide
 brew install --cask discord
 brew install --cask google-chrome
@@ -18,12 +19,19 @@ brew install --cask firefox
 brew install --cask 1password
 brew install --cask spotify
 brew install --cask docker
-brew install --cask rectangle
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 brew install pyenv
 
 brew install --cask alfred
+
+brew install --cask rectangle
+brew install --cask karabiner-elements
+
+brew install --cask syncthing
+
+brew tap oven-sh/bun
+brew install bun
 
 brew install python
 
