@@ -39,6 +39,10 @@ brew install mas
 # Flow (Pomodoro Timer)
 # mas install 1423210932
 
+# Needed by alfred's tailwind workflow
+brew install php
+
+brew install emacs
 
 brew cleanup
 
