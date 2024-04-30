@@ -11,6 +11,8 @@ source_if_exists () {
     fi
 }
 
+eval "$(brew shellenv)"
+
 source_if_exists $HOME/.env.sh
 
 export PATH=$HOME/node_modules/.bin:$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
@@ -78,6 +80,7 @@ source ~/.zsh-aliases
 zstyle ':completion:*:*:git:*' script ~/.zsh/.git-completion.bash
 # `compinit` scans $fpath, so do this before calling it.
 fpath=(~/.zsh $fpath)
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 autoload -Uz compinit && compinit
 
 autoload -U +X bashcompinit && bashcompinit
@@ -140,7 +143,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
 
