@@ -66,13 +66,6 @@ bindkey -v
 
 bindkey '^R' history-incremental-search-backward
 
-alias top="htop"
-alias emacs="emacs -nw"
-alias ls="exa"
-
-# Avoid problems with ^ which otherwise needs to be escaped
-# alias git="noglob git"
-
 # Include some custom work related aliases
 source ~/.zsh-aliases
 
@@ -103,48 +96,6 @@ function refresh {
   tput clear || exit 2; # Clear screen. Almost same as echo -en '\033[2J';
   bash -ic "$@";
 }
-
-# Like watch, but with color
-function cwatch {
-   while true; do
-     CMD="$@";
-     # Cache output to prevent flicker. Assigning to variable
-     # also removes trailing newline.
-     output=`refresh "$CMD"`;
-     # Exit if ^C was pressed while command was executing or there was an error.
-     exitcode=$?; [ $exitcode -ne 0 ] && exit $exitcode
-     printf '%s' "$output";  # Almost the same as echo $output
-     sleep 1;
-   done;
-}
-
-alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
-alias nvim-chad="NVIM_APPNAME=NvChad nvim"
-alias nvim-prelazy="NVIM_APPNAME=OlaPreLazy nvim"
-alias nvim-playground="NVIM_APPNAME=NvimPlayground nvim"
-alias nvim-astro="NVIM_APPNAME=astro nvim"
-alias nvim-lindell="NVIM_APPNAME=lindellAstro nvim"
-
-function nvims() {
-  items=("default" "LazyVim" "NvChad" "OlaPreLazy" "NvimPlayground astro lindellAstro")
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
-  if [[ -z $config ]]; then
-    echo "Nothing selected"
-    return 0
-  elif [[ $config == "default" ]]; then
-    config="OlaPreLazy"
-  fi
-  NVIM_APPNAME=$config nvim $@
-}
-
-bindkey -s ^a "nvims\n"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
