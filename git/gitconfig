@@ -1,3 +1,5 @@
 [user]
 name = Ola Flisbäck
 email = ola.flisback@gmail.com
+[push]
+	autoSetupRemote = true
