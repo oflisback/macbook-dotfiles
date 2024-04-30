@@ -1,8 +1,7 @@
 alias vgrep="nvim \`grep -rl $1\`"
 
 alias euler="ssh -t -X euler"
-#alias olawiki="emacs ~/repos/orgfiles/personal/olawiki.org"
-alias olawiki="echo nah, try euler then tmux a -t wikis"
+alias olawiki="emacs ~/repos/notes/orgfiles/personal/journal/2024.org"
 alias krucomwiki="emacs ~/repos/orgfiles/krucom/krucomwiki2.org"
 alias mwiki="emacs ~/repos/orgfiles/work/modelon/modelon.org"
 alias shax="cd /media/wd1/Ola/company/eget/solid\ hax\ 2013-"
