@@ -3,6 +3,7 @@ alias vgrep="nvim \`grep -rl $1\`"
 alias top="htop"
 alias emacs="emacs -nw"
 alias ls="exa"
+alias pip="pip3"
 
 alias euler="ssh -t -X euler"
 alias olawiki="emacs ~/repos/notes/orgfiles/personal/journal/2024.org"
@@ -11,7 +12,6 @@ alias mwiki="emacs ~/repos/orgfiles/work/modelon/modelon.org"
 alias shax="cd /media/wd1/Ola/company/eget/solid\ hax\ 2013-"
 alias ncpamixer="echo try super + shift + \{i,o\} instead!"
 alias gpt="chatgpt-cli --settings=/home/bolland/chatgpt-api-settings.js"
-alias vim=nvim-astro
 # function ssh_alias() {
 #   ssh "$@";
 #   setterm -default -clear rest;
@@ -27,10 +27,11 @@ alias rgf='rg --files | rg'
 
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
-alias nvim-prelazy="NVIM_APPNAME=OlaPreLazy nvim"
 alias nvim-playground="NVIM_APPNAME=NvimPlayground nvim"
 alias nvim-astro="NVIM_APPNAME=astro nvim"
 alias nvim-lindell="NVIM_APPNAME=lindellAstro nvim"
+alias nvim-scratch="NVIM_APPNAME=nvim nvim"
+alias vim=nvim-scratch
 
 function nvims() {
   items=("default" "LazyVim" "NvChad" "OlaPreLazy" "NvimPlayground astro lindellAstro")

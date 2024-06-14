@@ -15,7 +15,7 @@ eval "$(brew shellenv)"
 
 source_if_exists $HOME/.env.sh
 
-export PATH=$HOME/node_modules/.bin:$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/node_modules/.bin:$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/go/bin:$HOME/.cargo/bin:/opt/homebrew/bin/nvim:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
