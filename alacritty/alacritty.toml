@@ -55,7 +55,7 @@ mods = "Control"
 
 [shell]
 program = "/opt/homebrew/bin/zellij"
-args = ["-l", "/Users/oflisback/.config/zellij/layout.kdl"]
+args = ["-l", "/Users/oflisback/.config/zellij/layout.kdl", "attach", "--index", "0", "--create"]
 
 [window]
 dynamic_padding = true

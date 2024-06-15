@@ -14,6 +14,7 @@ source_if_exists () {
 eval "$(brew shellenv)"
 
 source_if_exists $HOME/.env.sh
+source_if_exists $HOME/.profile
 
 export PATH=$HOME/node_modules/.bin:$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/go/bin:$HOME/.cargo/bin:/opt/homebrew/bin/nvim:$PATH
 
@@ -113,3 +114,5 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 eval "$(zoxide init zsh)"
+
+export OBSIDIAN_REST_API_KEY=$(~/.config/echo-obsidian-key.sh)

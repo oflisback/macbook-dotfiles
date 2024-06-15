@@ -12,6 +12,7 @@ alias mwiki="emacs ~/repos/orgfiles/work/modelon/modelon.org"
 alias shax="cd /media/wd1/Ola/company/eget/solid\ hax\ 2013-"
 alias ncpamixer="echo try super + shift + \{i,o\} instead!"
 alias gpt="chatgpt-cli --settings=/home/bolland/chatgpt-api-settings.js"
+alias exit="echo use ctrl+d instead"
 # function ssh_alias() {
 #   ssh "$@";
 #   setterm -default -clear rest;
