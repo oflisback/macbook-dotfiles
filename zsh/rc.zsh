@@ -5,18 +5,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export OBSIDIAN_REST_API_KEY=$(~/.config/echo-obsidian-key.sh)
+
 source_if_exists () {
     if test -r "$1"; then
         source "$1"
     fi
 }
 
-eval "$(brew shellenv)"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH=$HOME/node_modules/.bin:$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/go/bin:$HOME/.cargo/bin:/opt/homebrew/bin/nvim:$PATH
 
 source_if_exists $HOME/.env.sh
 source_if_exists $HOME/.profile
 
-export PATH=$HOME/node_modules/.bin:$HOME/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/go/bin:$HOME/.cargo/bin:/opt/homebrew/bin/nvim:$PATH
+eval "$(brew shellenv)"
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -115,4 +119,3 @@ eval "$(pyenv init -)"
 
 eval "$(zoxide init zsh)"
 
-export OBSIDIAN_REST_API_KEY=$(~/.config/echo-obsidian-key.sh)

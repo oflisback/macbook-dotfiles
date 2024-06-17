@@ -6,7 +6,7 @@ import = [
 TERM = "xterm-256color"
 
 [font]
-size = 18.0
+size = 15.0
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
@@ -38,21 +38,6 @@ action = "IncreaseFontSize"
 key = "Plus"
 mods = "Control"
 
-#[[keyboard.bindings]]
-#chars = "\u0002\u001B[D"
-#key = "H"
-#mods = "Alt"
-
-#[[keyboard.bindings]]
-#chars = "\u0002\u001B[C"
-#key = "L"
-#mods = "Alt"
-
-#[[keyboard.bindings]]
-#chars = "\u0002\u001B[B"
-#key = "J"
-#mods = "Alt"
-
 [shell]
 program = "/opt/homebrew/bin/zellij"
 args = ["-l", "/Users/oflisback/.config/zellij/layout.kdl", "attach", "--index", "0", "--create"]
@@ -60,6 +45,7 @@ args = ["-l", "/Users/oflisback/.config/zellij/layout.kdl", "attach", "--index",
 [window]
 dynamic_padding = true
 option_as_alt = "OnlyLeft"
+startup_mode = "Fullscreen"
 
 [window.padding]
 x = 2
